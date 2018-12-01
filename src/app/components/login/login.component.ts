@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LeaderboardComponent } from 'src/app/shared/components/leaderboard/leaderboard.component'
 
 @Component({
   selector: 'app-login',

@@ -1,0 +1,26 @@
+<table mat-table [dataSource]="dataSource" [matSortStart]="desc" class="mat-elevation-z1" matSort matSortActive="score" matSortDirection="desc" [matSortDisabled]="true" fxFlexFill>
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element; let i = index;"> {{i+1}} </td>
+    </ng-container>
+  
+    <!-- School Column -->
+    <ng-container matColumnDef="school">
+      <th mat-header-cell *matHeaderCellDef> School </th>
+      <td mat-cell *matCellDef="let element"> {{element.school}} </td>
+    </ng-container>
+  
+    <!-- Score Column -->
+    <ng-container matColumnDef="score">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Score </th>
+      <td mat-cell *matCellDef="let element"> {{element.score | number}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
