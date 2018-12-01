@@ -4,6 +4,17 @@ import { MaterialModule } from './core/material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { routes } from '../app/app.router';
+import { FusionChartsModule } from 'angular-fusioncharts';
+
+// Load FusionCharts
+import * as FusionCharts from 'fusioncharts';
+// Load Charts module
+import * as Charts from 'fusioncharts/fusioncharts.charts';
+// Load fusion theme
+import * as Fusion from 'fusioncharts/themes/fusioncharts.theme.fusion'
+
+// Add dependencies to FusionChartsModule
+FusionChartsModule.fcRoot(FusionCharts, Charts, Fusion)
 
 import { AppComponent } from './app.component';
 import { ScrambbleComponent } from './components/scrambble/scrambble.component';
@@ -32,7 +43,9 @@ import { ProfileComponent } from './components/profile/profile.component';
     MaterialModule,
     FlexLayoutModule,
     NgbModule,
-    routes
+    FusionChartsModule,
+    routes,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
