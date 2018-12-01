@@ -35,6 +35,7 @@ import { ScrambleReviewComponent } from './components/scrambble/scramble-review/
 import { ScramblePlayComponent } from './components/scrambble/scramble-play/scramble-play.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { SpanishGameComponent } from './components/spanish-game/spanish-game.component';
+import { AccentRulesDialogComponent } from './components/spanish-game/accent-rules-dialog/accent-rules-dialog.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { SpanishGameComponent } from './components/spanish-game/spanish-game.com
     ScramblePlayComponent,
     ProfileComponent,
     SpanishGameComponent,
+    AccentRulesDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,6 +71,9 @@ import { SpanishGameComponent } from './components/spanish-game/spanish-game.com
     HttpClientModule,
     routes,
   
+  ],
+  entryComponents: [
+    AccentRulesDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

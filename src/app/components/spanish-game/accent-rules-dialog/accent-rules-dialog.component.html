@@ -1,0 +1,61 @@
+<div *ngIf="step==0">
+  
+  <table class="table table-borderless table-hover">
+    <tbody>
+      <tr>
+        <td>Aguda</td>
+        <td colspan="2">Son aquellas palabras cuyo golpe de voz recae sobre la última sílaba.
+            ca<strong>jón</strong>, par<strong>tir</strong>, a<strong>tril</strong>, so<strong>fá</strong></td>
+      </tr>
+      <tr>
+        <td>Llana</td>
+        <td colspan="2">Son palabras de más de una sílaba. El golpe de voz recae sobre la penúltima sílaba.
+            <strong>ár</strong>bol, ca<strong>mi</strong>sa, <strong>si</strong>lla, <strong>lá</strong>piz</td>
+      </tr>
+      <tr>
+        <td>Esdrújula</td>
+        <td colspan="2">Son aquellas palabras de más de dos sílabas. El golpe de voz recae sobre la antepenúltima sílaba (esdrújulas) o antes de la antepenúltima (sobreesdrújula).
+            <strong>cán</strong>taro, <strong>pá</strong>jaro, <strong>ín</strong>timo, <strong>cán</strong>dido, <strong>cám</strong>biaselo
+            </td>
+      </tr>
+    </tbody>
+  </table>
+  <div mat-dialog-actions>
+      <button mat-button (click)="step=1" cdkFocusInitial>Próximo</button>
+    </div>
+</div>
+<div *ngIf="step==1">
+  
+    <ul class="list-unstyled">
+
+        <li>1ª Regla:
+          <ul>
+            <li>Llevarán tilde las palabras agudas terminadas en vocal (a,e,i,o,u) y en las consonantes -n y -s.</li>
+          </ul>
+        </li>
+        <li>2ª Regla:
+            <ul>
+              <li>Llevarán tilde las palabras Ilanas que terminen en consonante, que no sea ni -n, ni -s.</li>
+            </ul>
+          </li>
+          <li>3ª Regla:
+              <ul>
+                <li>Llevarán tilde todas las palabras esdrújulas y sobreesdrújulas.</li>
+              </ul>
+            </li>
+     
+      </ul>
+    <div mat-dialog-actions>
+        <button mat-button (click)="step=0" cdkFocusInitial>Anterior</button>
+      </div>
+  </div>
+<!-- <div mat-dialog-content>
+  <p>What's your favorite animal?</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.animal">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+</div> -->

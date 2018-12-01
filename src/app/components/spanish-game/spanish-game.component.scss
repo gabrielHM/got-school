@@ -1,0 +1,20 @@
+.title-spanish{
+    height: 6em;
+    width: 6em;
+}
+.scrambble{
+    margin: 0 auto;
+    font-size: 2em;
+    padding: 10px;
+}
+ mat-dialog-container {
+    padding:0!important;
+}
+.wrong {
+    background-color:red;
+    color: whitesmoke;
+}
+.success {
+    background-color:mediumspringgreen;
+    color: whitesmoke;
+}

@@ -1,8 +1,32 @@
-<div fxLayout="column">
-<span fxFlex="20vh"></span>
-<mat-button-toggle-group #group="matButtonToggleGroup" fxLayoutAlign="space-evenly">
-    <button mat-fab color="primary" >Hay</button>
-    <button mat-fab color="primary" >Ahí</button>
-    <button mat-fab color="primary" >Ay</button>
-</mat-button-toggle-group>
+<!-- <div fxLayout="column" fxFlexFill>
+  <span fxFlex="20"></span>
+  <div fxLayout="row" fxLayoutAlign="space-around center">
+    <mat-card class="rounded-circle" class="title-spanish">Hay</mat-card>
+    <mat-card class="rounded-circle" class="title-spanish">Ay</mat-card>
+    <mat-card class="rounded-circle" class="title-spanish">Ahí</mat-card>
+  </div>
+</div> -->
+<div fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <h3>¿Dónde queda la tilde?</h3>
+    <mat-chip-list>
+      <mat-chip color="primary" selected (click)="openDialog()">Reglas</mat-chip>
+    </mat-chip-list>
+  </div>
+  <br/>
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <div fxLayout="row">
+      <mat-button-toggle (click)="accentLetter(i)" *ngFor="let letter of word; let i = index" [ngClass]="{'wrong': (!correct && answered), 'success': (correct && answered)}" class="scrambble" >
+        {{letter}}
+      </mat-button-toggle>
+    </div>
+    <br/>
+    <h1 *ngIf="correct" class="text-warning">Congratulations! <mat-icon>star_rate</mat-icon>×10</h1>
+
+    <div fxLayout="row">
+      <button mat-raised-button color="primary" [disabled]="!answered" (click)="prepareNext()">
+        Next <mat-icon aria-label="send icon">send</mat-icon>
+      </button>
+    </div>
+  </div>
 </div>
