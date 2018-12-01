@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-scrambble',
-  templateUrl: './scrambble.component.html',
-  styleUrls: ['./scrambble.component.scss']
+  selector: 'app-scramble-review',
+  templateUrl: './scramble-review.component.html',
+  styleUrls: ['./scramble-review.component.scss']
 })
-export class ScrambbleComponent implements OnInit {
+export class ScrambleReviewComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit() {
   }
-  ELEMENT_DATA = [
+  review_words = [
     {word: "vinegar", definition: 'dilute acetic acid', type: 'noun'},
     {word: "ball", definition: 'a lavish dance requiring formal attire', type: "noun"},
     {word: "violet", definition: 'of a color intermediate between red and blue', type: "adjective"},
@@ -23,8 +23,4 @@ export class ScrambbleComponent implements OnInit {
     // {word: 9, definition: 'Fluorine', type: 18.9984},
     // {word: 10, definition: 'Neon', type: 20.1797},
   ];
-    displayedColumns: string[] = ['word', 'definition', 'type'];
-    dataSource = this.ELEMENT_DATA;
-  }
-  
-
+}

@@ -1,0 +1,18 @@
+
+  <div fxLayout="column" fxLayoutAlign="space-around center" fxFlexFill>
+      <mat-grid-list cols="2" rowHeight="2:1">
+          <mat-grid-tile
+              *ngFor="let tile of tiles"
+              [colspan]="tile.cols"
+              [rowspan]="tile.rows"
+              [style.background]="tile.color">
+            {{tile.text}}
+          </mat-grid-tile>
+        </mat-grid-list>
+      <mat-card *ngFor="let word of review_words" fxFlex="20">
+        <mat-card-title>{{word.word}}</mat-card-title>
+        <mat-card-subtitle>{{word.type}}</mat-card-subtitle>
+        <mat-card-content><p>{{word.definition}}</p></mat-card-content>
+      </mat-card>
+    </div>
+

@@ -1,0 +1,23 @@
+.mat-table {
+    display: table;
+    width: 50%;
+
+    > .mat-header-row, > .mat-row {
+        display: table-row;
+        padding: 0;
+        border: none;
+
+        > .mat-header-cell, > .mat-cell {
+            display: table-cell;
+            height: 48px;
+            vertical-align: middle;
+
+            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        }
+    }
+}
+
+a, u {
+    text-decoration: none;
+    color: white;
+}
