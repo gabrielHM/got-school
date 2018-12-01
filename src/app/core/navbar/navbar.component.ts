@@ -12,8 +12,8 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
   navLinks = [
-    {'label':'Profile', 'route':'/profile', 'icon':'home'},
-    {'label':'Games', 'route':'/games', 'icon':'games'}]
+    {'label':'Profile', 'route':'/gotschool/profile', 'icon':'home'},
+    {'label':'Games', 'route':'/gotschool/games', 'icon':'games'}]
     
     
 }
