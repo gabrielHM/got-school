@@ -1,28 +1,19 @@
 <div fxLayout="column" fxLayoutAlign="space-around center" fxFlexFill>
   <h3>What's the word?</h3>
   <div fxLayout="row">
-        <mat-button-toggle  *ngFor="let letter of answer" class="scrambble">
+        <mat-button-toggle (click)="removeLetter(i)" *ngFor="let letter of answer; let i = index" [ngClass]="{'wrong': (currentWord.word.substr(i, 1) != letter && lettersPushed > i), 'success': (currentWord.word.substr(i, 1) == letter)}" class="scrambble">
                 {{letter}}
         </mat-button-toggle>
 
   </div>
-  <!-- <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
-    <div class="btn-group mr-2" role="group" aria-label="First group">
-      <button type="button" class="btn btn-secondary scrambble">1</button>
-      <button type="button" class="btn btn-secondary scrambble">2</button>
-      <button type="button" class="btn btn-secondary scrambble">3</button>
-      <button type="button" class="btn btn-secondary scrambble">4</button>
-    </div>
-  </div> -->
-
-
+<h1 *ngIf="correct" class="text-warning">Congratulations! <mat-icon>star_rate</mat-icon>×10</h1>
   <mat-button-toggle-group #group="matButtonToggleGroup">
-        <button mat-fab color="primary" *ngFor="let letter of currentWord.scrambble">{{letter}}</button>
+        <button mat-fab color="primary" *ngFor="let letter of currentWord.scrambble" [disabled]="correct" (click)="submitLetter(letter)">{{letter}}</button>
  
   </mat-button-toggle-group>
 <section>
   <h3>Definition:</h3>
-  <p class="lead">{{currentWord.definition}}</p>
+  <p class="lead">{{currentWord.definitions[0]}}</p>
 </section>
-  <button mat-raised-button color="accent">Next</button>
+  <button mat-raised-button color="accent" (click)="prepareResponse()" [disabled]="!correct">Next</button>
 </div>

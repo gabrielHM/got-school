@@ -1,5 +1,13 @@
 .scrambble{
     margin: 0 auto;
-    font-size: 100px;
+    font-size: 2em;
     padding: 10px;
+}
+.wrong {
+    background-color:red;
+    color: whitesmoke;
+}
+.success {
+    background-color:mediumspringgreen;
+    color: whitesmoke;
 }

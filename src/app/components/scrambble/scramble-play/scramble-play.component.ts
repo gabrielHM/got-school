@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DictionaryService } from 'src/app/core/http/dictionary.service'
+import { AbstractExtendedWebDriver } from 'protractor/built/browser';
 
 @Component({
   selector: 'app-scramble-play',
@@ -10,50 +11,62 @@ export class ScramblePlayComponent implements OnInit {
 
   constructor(private dictionary: DictionaryService) { }
   wordMerriam = {};
-  
+  possibleWords = ['woebegone','cactus','add','overt','drop','window','chief','hammer','beginner','low','distinct','low','pull','keen','chance','disarm','comb','painful','press','voiceless','fancy','invent','groan','undesirable','oafish','walk','frightening','gaudy','roof','greet','heat','absorbed','silky','retire','wretched','auspicious','trade','interesting','curved','grin','greasy','picayune','coordinated','balance','moon','sincere','trot','stretch','yard','fasten'];
+  index = 0;
+  lettersPushed = 0;
+  correct=false;
+  currentWord = {
+    word: "",
+    scrambble: [],
+    definitions: []
+  }
+  answer = [];
   ngOnInit() {
     this.prepareResponse();
-    this.wordMerriam = this.dictionary.getDefinition('spring').subscribe(
-      (data) => {console.log(data)},
-      (err) => console.log(err.error.message),
-      () => {}
-    );
   }
   wordIndex = 0;
 
-  review_words = [
-    { word: "vinegar", definition: 'dilute acetic acid', type: 'noun' },
-    { word: "ball", definition: 'a lavish dance requiring formal attire', type: "noun" },
-    { word: "violet", definition: 'of a color intermediate between red and blue', type: "adjective" },
-    { word: "spring", definition: 'the elasticity of something that can be stretched and returns to its original length', type: "noun" },
-    { word: "masterpiece", definition: 'the most outstanding work of a creative artist or craftsman', type: "noun" },
-    { word: "dig", definition: 'turn up, loosen, or remove earth', type: "verb" }
-  ];
-
-  currentWord = {
-    word: "test",
-    scrambble: ["e", "t", "t", "s"],
-    definition: 'dilute acetic acid'
-  }
-
-  answer = []
+  
 
   prepareResponse = function () {
-    for (var i = 0; i < this.currentWord.scrambble.length; i++) {
-      this.answer[i]="_";
-    }
-  }
-
-  scramble = function (str: string) {
-    var split_word = str.split("");
-    return split_word;
-  }
-
-  getNewWord = function (){
-    this.wordMerriam = this.dictionary.getDefinition('spring').subscribe(
-      (data) => {console.log(data)},
+    this.answer = [];
+    this.index = Math.floor((Math.random() * this.possibleWords.length));
+    this.currentWord.word = this.possibleWords[this.index];
+    this.currentWord.scrambble = this.scrambble(this.possibleWords[this.index]);
+    this.wordMerriam = this.dictionary.getDefinition(this.possibleWords[this.index]).subscribe(
+      (data) => {console.log(data); this.currentWord.definitions = data[0].shortdef;},
       (err) => console.log(err.error.message),
       () => {}
     );
+    for (var i = 0; i < this.currentWord.scrambble.length; i++) {
+      this.answer[i]="_";
+    }
+    console.log(this.currentWord);
   }
+
+  scrambble = function (str: string) {
+    var split_word = [];
+    var palabra = str.split("");
+    for(var i=0; i < str.length; i++){
+      var index = (Math.random() * palabra.length);
+      split_word.push(palabra.splice(index,1));
+    }
+    return split_word;
+  }
+
+  submitLetter = function (str: string){
+    if(this.lettersPushed < this.currentWord.word.length || 0){
+    this.answer[this.lettersPushed] = str;
+    this.lettersPushed++;
+    this.correct=(this.answer.join("") == this.currentWord.word);
+    }
+  }
+  removeLetter = function (i){
+    this.correct= false;
+    if(i== this.lettersPushed-1){
+    this.answer[i]='_'; 
+    this.lettersPushed--;
+    }
+  }
+
 }
