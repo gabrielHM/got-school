@@ -7,7 +7,7 @@ import { ScrambbleComponent } from './components/scrambble/scrambble.component';
 export const router: Routes = [
     {path: '', component: LoginComponent},
     {path: 'games', component: GamesComponent},
-    {path: 'scrambble', component: ScrambbleComponent},
+    {path: 'scrambble', component: ScrambbleComponent}
 
 
 ];

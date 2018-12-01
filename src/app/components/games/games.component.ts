@@ -13,7 +13,10 @@ export class GamesComponent implements OnInit {
   }
   
   games = [
-    {name:"Scrambble", description:"The original word game."}
+    {name:"Scrambble", description:"The original word game.", image: "assets/images/scrambble.jpg"},
+    {name:"PVP Math", description:"Game of the year edition. The Puerto Rico got talent of math.", image: "assets/images/pvpmath.jpg"},
+    {name:"Acentos", description:"Do you even punctuate? ¿Khè?", image: "https://i1.wp.com/www.sonria.com/wp-content/uploads/2016/04/acento.gif?zoom=2.5&resize=795%2C397"}
+
   ];
 
 }

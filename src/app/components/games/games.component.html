@@ -1,5 +1,10 @@
-<div fxLayout="row">
 
-<mat-card *ngFor="let game of games" fxFlex="20">
-  <mat-card-title><a routerLink="/scrambble" >{{game.name}}</a></mat-card-title>
-</mat-card></div>
+  <div fxLayout="row" fxLayoutAlign="space-around center" fxFlexFill>
+
+    <mat-card *ngFor="let game of games" fxFlex="20" routerLink="/scrambble" (click)="null">
+      <img mat-card-image src="{{game.image}}" alt="Game Image">
+      <mat-card-title>{{game.name}}</mat-card-title>
+      <mat-card-content><p>{{game.description}}</p></mat-card-content>
+    </mat-card>
+  </div>
+
