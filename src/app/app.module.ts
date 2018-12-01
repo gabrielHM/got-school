@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from './core/material/material.module';
 
 import { AppComponent } from './app.component';
+import { ScrambbleComponent } from './components/scrambble/scrambble.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ScrambbleComponent
   ],
   imports: [
     BrowserModule,
