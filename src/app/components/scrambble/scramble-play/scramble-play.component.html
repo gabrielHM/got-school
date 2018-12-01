@@ -1,3 +1,28 @@
-<p>
-  scramble-play works!
-</p>
+<div fxLayout="column" fxLayoutAlign="space-around center" fxFlexFill>
+  <h3>What's the word?</h3>
+  <div fxLayout="row">
+        <mat-button-toggle  *ngFor="let letter of answer" class="scrambble">
+                {{letter}}
+        </mat-button-toggle>
+
+  </div>
+  <!-- <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+    <div class="btn-group mr-2" role="group" aria-label="First group">
+      <button type="button" class="btn btn-secondary scrambble">1</button>
+      <button type="button" class="btn btn-secondary scrambble">2</button>
+      <button type="button" class="btn btn-secondary scrambble">3</button>
+      <button type="button" class="btn btn-secondary scrambble">4</button>
+    </div>
+  </div> -->
+
+
+  <mat-button-toggle-group #group="matButtonToggleGroup">
+        <button mat-fab color="primary" *ngFor="let letter of currentWord.scrambble">{{letter}}</button>
+ 
+  </mat-button-toggle-group>
+<section>
+  <h3>Definition:</h3>
+  <p class="lead">{{currentWord.definition}}</p>
+</section>
+  <button mat-raised-button color="accent">Next</button>
+</div>

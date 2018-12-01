@@ -13,6 +13,7 @@ import { CalendarModule, DateAdapter, CalendarMonthModule, CalendarCommonModule 
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 // import { DemoComponent } from '.component';
+import { HttpClientModule } from '@angular/common/http';
 
 // Load FusionCharts
 import * as FusionCharts from 'fusioncharts';
@@ -62,7 +63,10 @@ import { ProfileComponent } from './components/profile/profile.component';
       provide: DateAdapter,
       useFactory: adapterFactory
     }),
-    CalendarMonthModule
+    CalendarMonthModule,
+    HttpClientModule,
+    routes,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
