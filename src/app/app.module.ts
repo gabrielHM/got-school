@@ -5,6 +5,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { routes } from '../app/app.router';
 import { FusionChartsModule } from 'angular-fusioncharts';
+import { HttpClientModule } from '@angular/common/http';
 
 // Load FusionCharts
 import * as FusionCharts from 'fusioncharts';
@@ -44,6 +45,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     FlexLayoutModule,
     NgbModule,
     FusionChartsModule,
+    HttpClientModule,
     routes,
   
   ],
