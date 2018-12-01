@@ -21,9 +21,4 @@ export class ScramblePlayComponent implements OnInit {
     {word: "dig", definition: 'turn up, loosen, or remove earth', type: "verb"}
   ];
 
-  scramble=function(str:string) {
-    var split_word = str.split("");
-    split_word.forEach(function (value));
-    return split_word;
-  }
 }
