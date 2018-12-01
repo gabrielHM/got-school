@@ -9,11 +9,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 // import { FlatpickrModule } from 'angularx-flatpickr';
-import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { CalendarModule, DateAdapter, CalendarMonthModule, CalendarCommonModule } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 // import { DemoComponent } from '.component';
-
 
 // Load FusionCharts
 import * as FusionCharts from 'fusioncharts';
@@ -62,7 +61,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory
-    })
+    }),
+    CalendarMonthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

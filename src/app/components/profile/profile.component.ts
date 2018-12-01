@@ -9,6 +9,7 @@ export class ProfileComponent implements OnInit {
 
   dataSource: Object;
   chartConfig: Object;
+  viewDate = new Date();
 
   constructor() { 
     this.chartConfig = {
