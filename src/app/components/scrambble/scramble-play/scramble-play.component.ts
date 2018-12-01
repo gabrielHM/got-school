@@ -30,7 +30,9 @@ export class ScramblePlayComponent implements OnInit {
   
 
   prepareResponse = function () {
+    this.correct= false;
     this.answer = [];
+    this.lettersPushed = 0;
     this.index = Math.floor((Math.random() * this.possibleWords.length));
     this.currentWord.word = this.possibleWords[this.index];
     this.currentWord.scrambble = this.scrambble(this.possibleWords[this.index]);
