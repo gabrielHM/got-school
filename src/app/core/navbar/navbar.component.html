@@ -1,0 +1,19 @@
+<mat-sidenav-container [hasBackdrop]="false" fullscreen>
+  <mat-sidenav mode="side" [opened]="true" [disableClose]="true" [fixedInViewport]="true">
+   <mat-card>
+      <mat-card-header>
+          <mat-card-title>GotSchool!</mat-card-title>
+          <mat-card-subtitle>Student</mat-card-subtitle>
+          <img mat-card-avatar src="https://material.io/tools/icons/static/icons/baseline-school-24px.svg">
+      </mat-card-header>
+    </mat-card>
+    <mat-nav-list class="example-links">
+      <mat-list-item *ngFor="let link of navLinks">
+        <a matLine routerLink="/{{link.route}}" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active"><mat-icon>{{link.icon}}</mat-icon> {{ link.label }}</a>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content fxLayoutFill>
+    <router-outlet fxLayoutFill></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
