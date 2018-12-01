@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from './core/material/material.module';
 
 import { AppComponent } from './app.component';
+import { PruebaComponent } from './src/app/components/prueba/prueba.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PruebaComponent
   ],
   imports: [
     BrowserModule,
