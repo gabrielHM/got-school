@@ -1,4 +1,11 @@
-x
+<!-- AngularJS library -->
+<!-- <script type="text/javascript" src="angular.min.js"></script> -->
+<!-- FusionCharts library-->
+<!-- <script type="text/javascript" src="fusioncharts.js"></script>
+<script type="text/javascript" src="fusioncharts.charts.js"></script> -->
+<!-- Angular plugin -->
+<!-- <script type="text/javascript" src="angular-fusioncharts.min.js"></script> -->
+
 <div fxLayout="row wrap" fxLayoutAlign="flex-start">
   <div fxLayout="column">
 
@@ -12,11 +19,10 @@ x
 
   <div fxLayout="column">
     <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false"
-    >
-        <!-- *ngFor="let i of classes"; Let i : index  -->
+    *ngFor="let i of classes" >
     <!-- *ngFor="Let j of finished" -->
     <!-- *ngFor="Let k of total" -->
-
+      <p>Assignment Progress: </p>
       <mat-expansion-panel-header>
 
         <mat-panel-title>
@@ -25,7 +31,7 @@ x
 
       </mat-expansion-panel-header>
 
-      <!-- <p>Answered {{j}}/{{k}}</p> -->
+      <p>Answered {{j}}/{{k}}</p>
 
     </mat-expansion-panel>
   </div>
