@@ -11,6 +11,8 @@ import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './core/navbar/navbar.component';
 import { GamesComponent } from './components/games/games.component';
 import { LeaderboardComponent } from './shared/components/leaderboard/leaderboard.component';
+import { ScrambleReviewComponent } from './components/scrambble/scramble-review/scramble-review.component';
+import { ScramblePlayComponent } from './components/scrambble/scramble-play/scramble-play.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { LeaderboardComponent } from './shared/components/leaderboard/leaderboar
     LoginComponent,
     NavbarComponent,
     GamesComponent,
-    LeaderboardComponent
+    LeaderboardComponent,
+    ScrambleReviewComponent,
+    ScramblePlayComponent
   ],
   imports: [
     BrowserModule,
