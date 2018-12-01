@@ -1,18 +1,16 @@
-
-  <div fxLayout="column" fxLayoutAlign="space-around center" fxFlexFill>
-      <mat-grid-list cols="2" rowHeight="2:1">
-          <mat-grid-tile
-              *ngFor="let tile of tiles"
-              [colspan]="tile.cols"
-              [rowspan]="tile.rows"
-              [style.background]="tile.color">
-            {{tile.text}}
-          </mat-grid-tile>
-        </mat-grid-list>
-      <mat-card *ngFor="let word of review_words" fxFlex="20">
+<div >
+  <mat-grid-list cols="2" rowHeight="3:1" fxLayoutAlign="center">
+    <mat-grid-tile *ngFor="let word of review_words">
+      <mat-card fxFlex="35" >
         <mat-card-title>{{word.word}}</mat-card-title>
         <mat-card-subtitle>{{word.type}}</mat-card-subtitle>
-        <mat-card-content><p>{{word.definition}}</p></mat-card-content>
+        <mat-card-content>
+          <p>{{word.definition}}</p>
+        </mat-card-content>
       </mat-card>
-    </div>
-
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <button mat-raised-button color="primary" routerLink="/scrambble_play" class="btn btn-primary btn-lg">Play</button>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
