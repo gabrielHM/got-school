@@ -13,6 +13,7 @@ export class NavbarComponent implements OnInit {
   }
   navLinks = [
     {'label':'Profile', 'route':'', 'icon':'home'},
-    {'label':'Games', 'route':'/games', 'icon':'games'}
+    {'label':'Games', 'route':'/games', 'icon':'games'}]
+    
     
 }

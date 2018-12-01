@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { ScrambbleComponent } from './components/scrambble/scrambble.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './core/navbar/navbar.component';
-import { GamesComponent } from './component/games/games.component';
+import { GamesComponent } from './components/games/games.component';
 
 @NgModule({
   declarations: [
