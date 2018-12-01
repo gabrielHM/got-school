@@ -13,6 +13,7 @@
   </mat-button-toggle-group>
 <section>
   <h3>Definition:</h3>
+  <small>{{currentWord.type}}</small>
   <p class="lead">{{currentWord.definitions[0]}}</p>
 </section>
   <button mat-raised-button color="accent" (click)="prepareResponse()" [disabled]="!correct">Next</button>

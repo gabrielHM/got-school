@@ -18,7 +18,8 @@ export class ScramblePlayComponent implements OnInit {
   currentWord = {
     word: "",
     scrambble: [],
-    definitions: []
+    definitions: [],
+    type: ""
   }
   answer = [];
   ngOnInit() {
@@ -34,7 +35,7 @@ export class ScramblePlayComponent implements OnInit {
     this.currentWord.word = this.possibleWords[this.index];
     this.currentWord.scrambble = this.scrambble(this.possibleWords[this.index]);
     this.wordMerriam = this.dictionary.getDefinition(this.possibleWords[this.index]).subscribe(
-      (data) => {console.log(data); this.currentWord.definitions = data[0].shortdef;},
+      (data) => {console.log(data); this.currentWord.definitions = data[0].shortdef; this.currentWord.type = data[0].fl},
       (err) => console.log(err.error.message),
       () => {}
     );
