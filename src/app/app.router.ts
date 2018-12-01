@@ -1,5 +1,6 @@
 import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
+import { NavbarComponent } from './core/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { GamesComponent } from './components/games/games.component';
 import { ScrambbleComponent } from './components/scrambble/scrambble.component';
@@ -8,13 +9,20 @@ import { ScramblePlayComponent } from './components/scrambble/scramble-play/scra
 import { ProfileComponent } from './components/profile/profile.component';
 
 export const router: Routes = [
-    {path: '', component: LoginComponent},
-    {path: 'profile', component: ProfileComponent},
-    {path: 'games', component: GamesComponent},
-    {path: 'scrambble', component: ScrambbleComponent},
-    {path: 'scrambble_review', component: ScrambleReviewComponent},
-    {path: 'scrambble_play', component: ScramblePlayComponent},
-    {path: 'scrambble', component: ScrambbleComponent}
+    
+    {path: 'login', component: LoginComponent},
+    { path: 'gotschool', component: NavbarComponent,
+    children: [
+        {path: 'profile', component: ProfileComponent},
+        {path: 'games', component: GamesComponent},
+        {path: 'scrambble', component: ScrambbleComponent},
+        {path: 'scrambble_review', component: ScrambleReviewComponent},
+        {path: 'scrambble_play', component: ScramblePlayComponent},
+        {path: 'scrambble', component: ScrambbleComponent},
+        { path: '', redirectTo: 'profile', pathMatch: 'full' }
+    ]
+     },
+    {path: '', redirectTo:'login', pathMatch: 'full'}
 
 ];
 
