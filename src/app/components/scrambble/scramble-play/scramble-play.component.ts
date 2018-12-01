@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { forEach } from '@angular/router/src/utils/collection';
 
 @Component({
   selector: 'app-scramble-play',
@@ -19,4 +20,10 @@ export class ScramblePlayComponent implements OnInit {
     {word: "masterpiece", definition: 'the most outstanding work of a creative artist or craftsman', type: "noun"},
     {word: "dig", definition: 'turn up, loosen, or remove earth', type: "verb"}
   ];
+
+  scramble=function(str:string) {
+    var split_word = str.split("");
+    split_word.forEach(function (value));
+    return split_word;
+  }
 }
