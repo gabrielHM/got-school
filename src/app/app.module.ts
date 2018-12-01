@@ -13,6 +13,7 @@ import { GamesComponent } from './components/games/games.component';
 import { LeaderboardComponent } from './shared/components/leaderboard/leaderboard.component';
 import { ScrambleReviewComponent } from './components/scrambble/scramble-review/scramble-review.component';
 import { ScramblePlayComponent } from './components/scrambble/scramble-play/scramble-play.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ScramblePlayComponent } from './components/scrambble/scramble-play/scra
     GamesComponent,
     LeaderboardComponent,
     ScrambleReviewComponent,
-    ScramblePlayComponent
+    ScramblePlayComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

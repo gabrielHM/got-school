@@ -5,14 +5,16 @@ import { GamesComponent } from './components/games/games.component';
 import { ScrambbleComponent } from './components/scrambble/scrambble.component';
 import { ScrambleReviewComponent } from './components/scrambble/scramble-review/scramble-review.component';
 import { ScramblePlayComponent } from './components/scrambble/scramble-play/scramble-play.component';
-
+import { ProfileComponent } from './components/profile/profile.component';
 
 export const router: Routes = [
     {path: '', component: LoginComponent},
+    {path: 'profile', component: ProfileComponent},
     {path: 'games', component: GamesComponent},
     {path: 'scrambble', component: ScrambbleComponent},
     {path: 'scrambble_review', component: ScrambleReviewComponent},
-    {path: 'scrambble_play', component: ScramblePlayComponent}
+    {path: 'scrambble_play', component: ScramblePlayComponent},
+    {path: 'scrambble', component: ScrambbleComponent}
 
 ];
 
