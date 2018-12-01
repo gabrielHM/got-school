@@ -10,8 +10,16 @@ export class ProfileComponent implements OnInit {
   dataSource: Object;
   chartConfig: Object;
   viewDate = new Date();
+  total : number[];
+  finished : number[];
+  classes : string[];
 
   constructor() { 
+    
+    this.total = [5,10,15,10,10,15,5,15];
+    this.finished = [3,10,15,8,5,9,3,15];
+    this.classes = ["Advanced Spanish", "Adanced English","Pre-Calculus", "History", "Theater", "Math" + "Physical Education", "Physics" ];
+
     this.chartConfig = {
       width: '700',
       height: '400',
@@ -22,8 +30,8 @@ export class ProfileComponent implements OnInit {
     this.dataSource = {
       "chart": {
         "caption": "Weekly Report:",
-        "xAxisName": "Assigments Completed",
-        "yAxisName": "Days",
+        "xAxisName": "Days",
+        "yAxisName": "Assigments Completed",
         "theme": "fusion",
       },
       "data": [{
