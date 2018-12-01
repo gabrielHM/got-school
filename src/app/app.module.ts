@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MaterialModule } from './core/material/material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { routes } from '../app/app.router';
 
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { GamesComponent } from './components/games/games.component';
   imports: [
     BrowserModule,
     MaterialModule,
+    FlexLayoutModule,
     routes
   ],
   providers: [],

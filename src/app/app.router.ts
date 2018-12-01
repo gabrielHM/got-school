@@ -1,7 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 import { LoginComponent } from './components/login/login.component';
-import { GamesComponent } from './component/games/games.component';
+import { GamesComponent } from './components/games/games.component';
 import { ScrambbleComponent } from './components/scrambble/scrambble.component';
 
 export const router: Routes = [
