@@ -1,18 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MaterialModule } from './core/material/material.module';
+import { routes } from '../app/app.router';
 
 import { AppComponent } from './app.component';
-import { PruebaComponent } from './src/app/components/prueba/prueba.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PruebaComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    MaterialModule
+    MaterialModule,
+    routes
   ],
   providers: [],
   bootstrap: [AppComponent]
