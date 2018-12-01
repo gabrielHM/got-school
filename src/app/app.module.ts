@@ -9,6 +9,8 @@ import { ScrambbleComponent } from './components/scrambble/scrambble.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './core/navbar/navbar.component';
 import { GamesComponent } from './components/games/games.component';
+import { ScrambleReviewComponent } from './components/scrambble/scramble-review/scramble-review.component';
+import { ScramblePlayComponent } from './components/scrambble/scramble-play/scramble-play.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { GamesComponent } from './components/games/games.component';
     ScrambbleComponent,
     LoginComponent,
     NavbarComponent,
-    GamesComponent
+    GamesComponent,
+    ScrambleReviewComponent,
+    ScramblePlayComponent
   ],
   imports: [
     BrowserModule,
