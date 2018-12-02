@@ -36,6 +36,7 @@ import { ScramblePlayComponent } from './components/scrambble/scramble-play/scra
 import { ProfileComponent } from './components/profile/profile.component';
 import { SpanishGameComponent } from './components/spanish-game/spanish-game.component';
 import { AccentRulesDialogComponent } from './components/spanish-game/accent-rules-dialog/accent-rules-dialog.component';
+import { VideoResourcesComponent } from './components/video-resources/video-resources.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { AccentRulesDialogComponent } from './components/spanish-game/accent-rul
     ProfileComponent,
     SpanishGameComponent,
     AccentRulesDialogComponent,
+    VideoResourcesComponent,
   ],
   imports: [
     BrowserModule,
