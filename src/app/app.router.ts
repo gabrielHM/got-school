@@ -25,7 +25,7 @@ export const router: Routes = [
         {path: 'spanish_game', component: SpanishGameComponent},
         {path: 'video_resources', component: VideoResourcesComponent},
         {path: 'recess', component: RecessComponent},
-        { path: '', redirectTo: 'profile', pathMatch: 'full'},
+        // {path: '', redirectTo: 'profile', pathMatch: 'full' } 
     ]
      },
     {path: '', redirectTo:'login', pathMatch: 'full'}
