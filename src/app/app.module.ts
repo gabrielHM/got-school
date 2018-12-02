@@ -35,8 +35,12 @@ import { ScrambleReviewComponent } from './components/scrambble/scramble-review/
 import { ScramblePlayComponent } from './components/scrambble/scramble-play/scramble-play.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { SpanishGameComponent } from './components/spanish-game/spanish-game.component';
+<<<<<<< HEAD
 import { AccentRulesDialogComponent } from './components/spanish-game/accent-rules-dialog/accent-rules-dialog.component';
 import { VideoResourcesComponent } from './components/video-resources/video-resources.component';
+=======
+import { RecessComponent } from './components/recess/recess.component';
+>>>>>>> profile
 
 @NgModule({
   declarations: [
@@ -50,8 +54,12 @@ import { VideoResourcesComponent } from './components/video-resources/video-reso
     ScramblePlayComponent,
     ProfileComponent,
     SpanishGameComponent,
+<<<<<<< HEAD
     AccentRulesDialogComponent,
     VideoResourcesComponent,
+=======
+    RecessComponent,
+>>>>>>> profile
   ],
   imports: [
     BrowserModule,
@@ -64,7 +72,6 @@ import { VideoResourcesComponent } from './components/video-resources/video-reso
     CommonModule,
     FormsModule,
     NgbModalModule,
-    // FlatpickrModule.forRoot(),
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory
