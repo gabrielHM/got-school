@@ -4,7 +4,7 @@
     <h3>Select your Avatar:</h3>
   <div fxLayout="row" fxLayout.lt-md="column" >
 
-    <mat-card *ngFor="let av of avatars" fxFlex="33" fxFlex.gt-md="20" (click)="null">
+    <mat-card *ngFor="let av of avatars; let i = index" fxFlex="33" fxFlex.gt-md="20" (click)="openDialog(i)">
       <img src="{{av.images}}" class="img-responsive" width="100%">
     </mat-card>
 

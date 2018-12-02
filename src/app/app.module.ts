@@ -39,6 +39,7 @@ import { AccentRulesDialogComponent } from './components/spanish-game/accent-rul
 import { VideoResourcesComponent } from './components/video-resources/video-resources.component';
 import { RecessComponent } from './components/recess/recess.component';
 import { PvpmathComponent } from './components/pvpmath/pvpmath.component';
+import { EvolutionDialogComponent } from './components/recess/evolution-dialog/evolution-dialog.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { PvpmathComponent } from './components/pvpmath/pvpmath.component';
     VideoResourcesComponent,
     RecessComponent,
     PvpmathComponent,
+    EvolutionDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -78,7 +80,8 @@ import { PvpmathComponent } from './components/pvpmath/pvpmath.component';
   
   ],
   entryComponents: [
-    AccentRulesDialogComponent
+    AccentRulesDialogComponent,
+    EvolutionDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

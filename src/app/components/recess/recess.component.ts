@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { EvolutionDialogComponent } from './evolution-dialog/evolution-dialog.component';
 
 export interface Avatars {
   images: string;
@@ -16,11 +18,20 @@ export interface Avatars {
 
 export class RecessComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
   }
+  openDialog(i): void {
+    const dialogRef = this.dialog.open(EvolutionDialogComponent, {
+      width: '600px',
+      data: { index : i }
+    });
 
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
   avatars: Avatars[] = [
     { images: 'assets/avatars/alien 1.png', description:"Alien", cols: 1, rows: 2 },
     { images: 'assets/avatars/electric lizard 1.png', description:"Electric Lizard", cols: 1, rows: 2 },

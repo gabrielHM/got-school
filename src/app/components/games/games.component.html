@@ -1,6 +1,6 @@
   <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-around center" fxFlexFill>
     <mat-card *ngFor="let game of games" fxFlex fxFlex.gt-sm="20" routerLink="{{game.link}}" (click)="null">
-      <h2 id="coming_soon_math" *ngIf="game.name == 'PVP Math'">Coming Soon!</h2>
+      <p id="coming_soon_math" *ngIf="game.name == 'PVP Math'">Coming Soon!</p>
       <img mat-card-image src="{{game.image}}" alt="Game Image">
       <mat-card-title>{{game.name}}</mat-card-title>
       <mat-card-content><p>{{game.description}}</p></mat-card-content>
