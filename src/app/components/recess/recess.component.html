@@ -1,14 +1,11 @@
-<mat-toolbar color="primary" fxFlexFill fxLayoutFill>
-  <mat-toolbar-row>
-    <span>Recess</span>
-  </mat-toolbar-row>
-</mat-toolbar>
-
-<mat-grid-list cols="3" rowHeight="1:1">
-  <mat-grid-tile
-      *ngFor="let av of avatars"
-      [colspan]="av.cols"
-      [rowspan]="av.rows">
-    {{av.img}}
+<mat-grid-list cols="4" rowHeight="1:1">
+  <mat-grid-tile *ngFor="let av of avatars"
+ 
+  >
+      <img src="{{av.images}}" alt="">
   </mat-grid-tile>
 </mat-grid-list>
+
+
+<!-- [colspan] = "av.column"
+[rowspan] = "av.rows" -->
