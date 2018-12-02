@@ -1,14 +1,14 @@
-<mat-toolbar color="primary" fxFlexFill fxLayoutFill>
+<!-- <mat-toolbar color="primary" fxFlexFill fxLayoutFill>
   <mat-toolbar-row>
     <span>Recess</span>
   </mat-toolbar-row>
-</mat-toolbar>
+</mat-toolbar> -->
 
 <mat-grid-list cols="3" rowHeight="1:1">
   <mat-grid-tile
       *ngFor="let av of avatars"
       [colspan]="av.cols"
       [rowspan]="av.rows">
-    {{av.img}}
+    {{av.image}}
   </mat-grid-tile>
 </mat-grid-list>

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-export interface Tile {
-  picName: string;
-  cols; number;
+export interface avatars {
+  images : string;
+  description: string;
+  cols: number;
   rows: number;
 }
 
@@ -21,11 +22,11 @@ export class RecessComponent implements OnInit {
   }
 
   avatars = [
-    { images: 'https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjXn-2CjIDfAhUn74MKHWdOCuYQjRx6BAgBEAU&url=https%3A%2F%2Fwww.unilad.co.uk%2Fgaming%2Fthe-nine-worst-video-game-character-redesigns%2F&psig=AOvVaw3sY2OlDr1zcV-m8CGnT4gK&ust=1543803932550352', description:"Alien", cols: 1, rows: 2 },
-    { images: 'https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjXn-2CjIDfAhUn74MKHWdOCuYQjRx6BAgBEAU&url=https%3A%2F%2Fwww.unilad.co.uk%2Fgaming%2Fthe-nine-worst-video-game-character-redesigns%2F&psig=AOvVaw3sY2OlDr1zcV-m8CGnT4gK&ust=1543803932550352', description:"Electric Lizard", cols: 1, rows: 2 },
-    { images: 'https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjXn-2CjIDfAhUn74MKHWdOCuYQjRx6BAgBEAU&url=https%3A%2F%2Fwww.unilad.co.uk%2Fgaming%2Fthe-nine-worst-video-game-character-redesigns%2F&psig=AOvVaw3sY2OlDr1zcV-m8CGnT4gK&ust=1543803932550352', description:"Paper Book", cols: 1, rows: 2 },
-    { images: 'https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjXn-2CjIDfAhUn74MKHWdOCuYQjRx6BAgBEAU&url=https%3A%2F%2Fwww.unilad.co.uk%2Fgaming%2Fthe-nine-worst-video-game-character-redesigns%2F&psig=AOvVaw3sY2OlDr1zcV-m8CGnT4gK&ust=1543803932550352', description:"Shark Fish", cols: 1, rows: 3 },
-    { images: 'https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjXn-2CjIDfAhUn74MKHWdOCuYQjRx6BAgBEAU&url=https%3A%2F%2Fwww.unilad.co.uk%2Fgaming%2Fthe-nine-worst-video-game-character-redesigns%2F&psig=AOvVaw3sY2OlDr1zcV-m8CGnT4gK&ust=1543803932550352', description:"Spaceship", cols: 1, rows: 3 },
+    { images: 'https://www.spyrothedragon.com/content/dam/atvi/spyro/home/hero/spyro.png', description:"Alien", cols: 1, rows: 2 },     //gadejo
+    { images: 'https://www.spyrothedragon.com/content/dam/atvi/spyro/home/hero/spyro.png', description:"Electric Lizard", cols: 1, rows: 2 }, // reptiluz->repticrock
+    { images: 'https://www.spyrothedragon.com/content/dam/atvi/spyro/home/hero/spyro.png', description:"Paper Book", cols: 1, rows: 2 },   //exito
+    { images: 'https://www.spyrothedragon.com/content/dam/atvi/spyro/home/hero/spyro.png', description:"Shark Fish", cols: 1, rows: 3 },  //tibupez->corrrentin
+    { images: 'https://www.spyrothedragon.com/content/dam/atvi/spyro/home/hero/spyro.png', description:"Spaceship", cols: 1, rows: 3 },   //boliespacial
    ];
 
 
