@@ -1,11 +1,18 @@
 <mat-sidenav-container [hasBackdrop]="false" fullscreen>
   <mat-sidenav mode="side" [opened]="true" [disableClose]="true" [fixedInViewport]="true">
-   <mat-card>
+   <mat-card [style.backgroundColor]="'primary'">
       <mat-card-header>
           <mat-card-title>GotSchool!</mat-card-title>
           <mat-card-subtitle>Student</mat-card-subtitle>
-          <img mat-card-avatar src="https://material.io/tools/icons/static/icons/baseline-school-24px.svg">
+          <img mat-card-avatar src="https://material.io/tools/icons/static/icons/baseline-school-24px.svg">       
       </mat-card-header>
+      <mat-card-title-group fxLayoutAlign="center center">        
+          <img class="img-fluid" width="128" src="assets/avatars/alien 1.png">
+      </mat-card-title-group>
+      <mat-card-content fxLayoutAlign="center center">
+        <br/>
+        Juan del Pueblo
+      </mat-card-content>
     </mat-card>
     <mat-nav-list class="example-links">
       <mat-list-item *ngFor="let link of navLinks">

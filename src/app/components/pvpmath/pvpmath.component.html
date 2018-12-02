@@ -1,0 +1,11 @@
+<div fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
+  <div fxLayout="row" fxLayoutAlign="center center">
+
+    <mat-card>
+      <div [innerHTML]="exercise.question">
+      </div>
+      <br />
+      <div *ngFor="let choice of exercise.choices"[innerHTML]="choice"></div>
+    </mat-card>
+  </div>
+</div>
