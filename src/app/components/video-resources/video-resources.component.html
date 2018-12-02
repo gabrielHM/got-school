@@ -1,3 +1,10 @@
-<p>
-  Under Construction!
-</p>
+<div fxLayout="column" fxLayoutAlign="center center" *ngIf="!submitted">
+    <form class="video-form">
+        <mat-form-field>
+          <input matInput placeholder="Video Id">
+        </mat-form-field>
+      </form>
+      <button mat-button type="submit" (click)="submitId('wcPtKlW78lU')">Get Link</button>
+</div>
+<!-- <div *ngIf="submitted" [innerHTML]="videoResponse"></div> -->
+<div *ngIf="submitted"><a mat-button href="{{urlHtml}}">Go to Download Page</a></div>
