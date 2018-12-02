@@ -1,27 +1,21 @@
-<!-- AngularJS library -->
-<!-- <script type="text/javascript" src="angular.min.js"></script> -->
-<!-- FusionCharts library-->
-<!-- <script type="text/javascript" src="fusioncharts.js"></script>
-<script type="text/javascript" src="fusioncharts.charts.js"></script> -->
-<!-- Angular plugin -->
-<!-- <script type="text/javascript" src="angular-fusioncharts.min.js"></script> -->
-
 <div fxLayout="row wrap" fxLayoutAlign="flex-start">
+  
+  <!-- GRAPH -->
   <div fxLayout="column">
-
     <fusioncharts [chartConfig]=chartConfig [dataSource]=dataSource>
     </fusioncharts>
     <p>Calendar</p>
+
+    <!-- CALENDAR -->
     <mwl-calendar-month-view [viewDate]="viewDate" [events]="events">
     </mwl-calendar-month-view>
-
   </div>
 
+  <!-- NAVBAR  -->
   <div fxLayout="column">
-    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false"
-    *ngFor="let i of classes" >
-    <!-- *ngFor="Let j of finished" -->
-    <!-- *ngFor="Let k of total" -->
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" *ngFor="let i of classes">
+      <!-- *ngFor="Let j of finished" -->
+      <!-- *ngFor="Let k of total" -->
       <p>Assignment Progress: </p>
       <mat-expansion-panel-header>
 
