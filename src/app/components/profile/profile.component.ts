@@ -13,16 +13,23 @@ export class ProfileComponent implements OnInit {
   total : number[];
   finished : number[];
   classes : string[];
-
+events = [{
+  start: new Date('Dec 7, 2018'),
+  end: new Date('Dec 14, 2018'),
+  title: 'Final Exams',
+  color: '#42f4cb',
+  allDay: true,
+  resizable: {
+    beforeStart: false,
+    afterEnd: false,
+  }}];
   constructor() { 
     
     this.total = [5,10,15,10,10,15,5,15];
     this.finished = [3,10,15,8,5,9,3,15];
-    this.classes = ["Advanced Spanish", "Adanced English","Pre-Calculus", "History", "Theater", "Math" + "Physical Education", "Physics" ];
+    this.classes = ["Advanced Spanish", "Adanced English","Pre-Calculus", "History", "Theater", "Math" + "Physical Education", "Physics" ];
 
     this.chartConfig = {
-      width: '700',
-      height: '400',
       type: 'column2d',
       dataFormat: 'json',
     };
@@ -57,6 +64,8 @@ export class ProfileComponent implements OnInit {
         "value": "2"
       }]
     };
+
+
   }
 
   ngOnInit() {

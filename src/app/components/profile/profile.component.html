@@ -1,33 +1,39 @@
-<div fxLayout="row wrap" fxLayoutAlign="flex-start">
-  
-  <!-- GRAPH -->
-  <div fxLayout="column">
-    <fusioncharts [chartConfig]=chartConfig [dataSource]=dataSource>
-    </fusioncharts>
-    <p>Calendar</p>
+<mat-card class="main-tabs">
+  <mat-tab-group dynamicHeight>
+    <mat-tab label="My Classes" >
+      <!-- NAVBAR  -->
+      <div fxLayout="column" fxFlexFill>
+          <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" *ngFor="let i of classes">
+          <!-- *ngFor="Let j of finished" -->
+          <!-- *ngFor="Let k of total" -->
+          <p>Assignment Progress: </p>
+          <mat-expansion-panel-header>
 
-    <!-- CALENDAR -->
-    <mwl-calendar-month-view [viewDate]="viewDate" [events]="events">
-    </mwl-calendar-month-view>
-  </div>
+            <mat-panel-title>
+              {{i}}
+            </mat-panel-title>
 
-  <!-- NAVBAR  -->
-  <div fxLayout="column">
-    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" *ngFor="let i of classes">
-      <!-- *ngFor="Let j of finished" -->
-      <!-- *ngFor="Let k of total" -->
-      <p>Assignment Progress: </p>
-      <mat-expansion-panel-header>
+          </mat-expansion-panel-header>
 
-        <mat-panel-title>
-          {{i}}
-        </mat-panel-title>
+          <p>Answered {{j}}/{{k}}</p>
 
-      </mat-expansion-panel-header>
+        </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    </mat-tab>
 
-      <p>Answered {{j}}/{{k}}</p>
-
-    </mat-expansion-panel>
-  </div>
-
-</div>
+    <mat-tab label="Weekly Reports">
+      <section fxLayout="row" fxLayoutAlign="center center" fxFlexFill>
+        <fusioncharts [chartConfig]=chartConfig [dataSource]=dataSource width="100%"  height="50%" fxFlex>
+        </fusioncharts>
+      </section>
+    </mat-tab>
+    <mat-tab label="Calendar">
+      <div class="example-large-box mat-elevation-z4">
+        <mwl-calendar-month-view [viewDate]="viewDate" [events]="events">
+        </mwl-calendar-month-view>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</mat-card>
