@@ -13,17 +13,11 @@ export class NavbarComponent implements OnInit {
   }
   
   navLinks = [
-<<<<<<< HEAD
     {'label':'Profile', 'route':'/gotschool/profile', 'icon':'home'},
     {'label':'Games', 'route':'/gotschool/games', 'icon':'games'},
     {'label':'Video Resources', 'route':'/gotschool/video_resources', 'icon':'video_library'},
-  ]
-=======
-    {'label':'Profile','route':'/gotschool/profile', 'icon':'home'},
-    {'label':'Games','route':'/gotschool/games', 'icon':'games'},
     {'label':'Recess','route' : '/gotschool/recess', 'icon' : 'stars'}]
 
->>>>>>> profile
     
     
 }

@@ -8,11 +8,8 @@ import { ScrambleReviewComponent } from './components/scrambble/scramble-review/
 import { ScramblePlayComponent } from './components/scrambble/scramble-play/scramble-play.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { SpanishGameComponent } from 'src/app/components/spanish-game/spanish-game.component';
-<<<<<<< HEAD
 import { VideoResourcesComponent } from './components/video-resources/video-resources.component';
-=======
 import { RecessComponent } from './components/recess/recess.component';
->>>>>>> profile
 
 export const router: Routes = [
     
@@ -26,14 +23,9 @@ export const router: Routes = [
         {path: 'scrambble_play', component: ScramblePlayComponent},
         {path: 'scrambble', component: ScrambbleComponent},
         {path: 'spanish_game', component: SpanishGameComponent},
-<<<<<<< HEAD
         {path: 'video_resources', component: VideoResourcesComponent},
-        { path: '', redirectTo: 'profile', pathMatch: 'full' }
-
-=======
         {path: 'recess', component: RecessComponent},
         { path: '', redirectTo: 'profile', pathMatch: 'full'},
->>>>>>> profile
     ]
      },
     {path: '', redirectTo:'login', pathMatch: 'full'}
