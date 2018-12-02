@@ -1,11 +1,12 @@
-<mat-grid-list cols="4" rowHeight="1:1">
-  <mat-grid-tile *ngFor="let av of avatars"
- 
-  >
-      <img src="{{av.images}}" alt="">
-  </mat-grid-tile>
-</mat-grid-list>
 
 
-<!-- [colspan] = "av.column"
-[rowspan] = "av.rows" -->
+<div fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
+    <h3>Select your Avatar:</h3>
+  <div fxLayout="row" fxLayout.lt-md="column" >
+
+    <mat-card *ngFor="let av of avatars" fxFlex="33" fxFlex.gt-md="20" (click)="null">
+      <img src="{{av.images}}" class="img-responsive" width="100%">
+    </mat-card>
+
+  </div>
+</div>

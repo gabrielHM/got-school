@@ -37,11 +37,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { SpanishGameComponent } from './components/spanish-game/spanish-game.component';
 import { AccentRulesDialogComponent } from './components/spanish-game/accent-rules-dialog/accent-rules-dialog.component';
 import { VideoResourcesComponent } from './components/video-resources/video-resources.component';
-<<<<<<< HEAD
 import { RecessComponent } from './components/recess/recess.component';
-=======
 import { PvpmathComponent } from './components/pvpmath/pvpmath.component';
->>>>>>> 4b8a6542b65953e052750b99ccff9c3580747df5
 
 @NgModule({
   declarations: [
@@ -57,11 +54,8 @@ import { PvpmathComponent } from './components/pvpmath/pvpmath.component';
     SpanishGameComponent,
     AccentRulesDialogComponent,
     VideoResourcesComponent,
-<<<<<<< HEAD
     RecessComponent,
-=======
     PvpmathComponent,
->>>>>>> 4b8a6542b65953e052750b99ccff9c3580747df5
   ],
   imports: [
     BrowserModule,

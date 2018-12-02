@@ -9,11 +9,8 @@ import { ScramblePlayComponent } from './components/scrambble/scramble-play/scra
 import { ProfileComponent } from './components/profile/profile.component';
 import { SpanishGameComponent } from 'src/app/components/spanish-game/spanish-game.component';
 import { VideoResourcesComponent } from './components/video-resources/video-resources.component';
-<<<<<<< HEAD
 import { RecessComponent } from './components/recess/recess.component';
-=======
 import { PvpmathComponent } from './components/pvpmath/pvpmath.component';
->>>>>>> 4b8a6542b65953e052750b99ccff9c3580747df5
 
 export const router: Routes = [
     
@@ -28,14 +25,11 @@ export const router: Routes = [
         {path: 'scrambble', component: ScrambbleComponent},
         {path: 'spanish_game', component: SpanishGameComponent},
         {path: 'video_resources', component: VideoResourcesComponent},
-<<<<<<< HEAD
         {path: 'recess', component: RecessComponent},
         // {path: '', redirectTo: 'profile', pathMatch: 'full' } 
-=======
         {path: 'pvpmath', component: PvpmathComponent},
         { path: '', redirectTo: 'profile', pathMatch: 'full' }
 
->>>>>>> 4b8a6542b65953e052750b99ccff9c3580747df5
     ]
      },
     {path: '', redirectTo:'login', pathMatch: 'full'}
