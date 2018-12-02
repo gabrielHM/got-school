@@ -8,6 +8,7 @@ import { ScrambleReviewComponent } from './components/scrambble/scramble-review/
 import { ScramblePlayComponent } from './components/scrambble/scramble-play/scramble-play.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { SpanishGameComponent } from 'src/app/components/spanish-game/spanish-game.component';
+import { RecessComponent } from './components/recess/recess.component';
 
 export const router: Routes = [
     
@@ -21,8 +22,8 @@ export const router: Routes = [
         {path: 'scrambble_play', component: ScramblePlayComponent},
         {path: 'scrambble', component: ScrambbleComponent},
         {path: 'spanish_game', component: SpanishGameComponent},
-        { path: '', redirectTo: 'profile', pathMatch: 'full' }
-
+        {path: 'recess', component: RecessComponent},
+        { path: '', redirectTo: 'profile', pathMatch: 'full'},
     ]
      },
     {path: '', redirectTo:'login', pathMatch: 'full'}
