@@ -29,11 +29,12 @@
     "angular-draggable-droppable": "^4.0.2",
     "angular-fusioncharts": "^2.0.4",
     "angular-resizable-element": "^3.2.2",
-    "calendar-utils": "^0.2.3",
     "bootstrap": "^4.1.3",
+    "calendar-utils": "^0.2.3",
     "core-js": "^2.5.4",
     "date-fns": "^1.29.0",
     "fusioncharts": "^3.13.2-sr.1",
+    "mathml-to-svg": "^1.0.1",
     "positioning": "^1.4.0",
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.26"

@@ -6,6 +6,7 @@
         </mat-button-toggle>
 
   </div>
+  <img class="img-fluid" width="128" src="/assets/avatars/victory-gif-2.gif" *ngIf="correct">
 <h1 *ngIf="correct" class="text-warning">Congratulations! <mat-icon>star_rate</mat-icon>×10</h1>
   <mat-button-toggle-group #group="matButtonToggleGroup">
         <button mat-fab color="primary" *ngFor="let letter of currentWord.scrambble" [disabled]="correct" (click)="submitLetter(letter)">{{letter}}</button>
